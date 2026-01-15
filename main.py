@@ -50,8 +50,12 @@ from routers.score_cap_dim import router as score_cap_dim_router
 from routers.usuarios import router as usuarios_router
 from routers.usuario_empresa import router as usuario_empresa_router
 from routers.version_metodologia import router as version_metodologia_router
+from routers.motor_reglas import router as motor_reglas_router
+from routers.calculo_scores import router as calculo_scores_router
 
 
+app.include_router(calculo_scores_router)
+app.include_router(motor_reglas_router)
 app.include_router(version_metodologia_router)
 app.include_router(usuario_empresa_router)
 app.include_router(usuarios_router)
