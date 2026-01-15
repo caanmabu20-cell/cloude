@@ -19,11 +19,13 @@ router = APIRouter(
 # ============================
 
 class Empresa(BaseModel):
-    id_empresa: Optional[int] = None
-    razon_social: str
-    nit: Optional[str] = None
-    sector: Optional[str] = None
-    fl_activo: Optional[str] = "Y"
+    nombre: str                      # ✅ Nombre correcto
+    sector: Optional[str] = None     # ✅ OK
+    tamano: Optional[str] = None     # ✅ Agregado
+    pais: Optional[str] = None       # ✅ Agregado
+    ciudad: Optional[str] = None     # ✅ Agregado
+    fl_activa: Optional[str] = "Y"   # ✅ Corregido
+    dt_creacion: Optional[str] = None  # ✅ Agregado (read-only)
 
 
 # ============================
