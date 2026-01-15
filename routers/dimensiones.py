@@ -19,10 +19,11 @@ router = APIRouter(
 # ============================
 
 class Dimension(BaseModel):
-    id_dimension: Optional[int] = None
     codigo: str
+    nombre: str                      # ✅ Agregado
     descripcion: Optional[str] = None
-    fl_activo: Optional[str] = "Y"
+    orden: int                       # ✅ Agregado
+    fl_activa: Optional[str] = "Y"   # ✅ Corregido
 
 
 # ============================
